@@ -250,6 +250,7 @@ const SwapBox = ({ Moralis }) => {
             
         } catch (error) {
             swapBtnRef.current.innerHTML = 'Swap'
+            fromAmountRef.current.innerText ='Insufficient liquidity...'
             console.log(error);
         }
     }
@@ -284,7 +285,7 @@ const SwapBox = ({ Moralis }) => {
             <div id="nav-container">
                 <div id="logo-title-container">
                     <img src={(logo)} alt="logo" className="logo" />
-                    <h3>The SwapBox Exchange</h3>
+                    <h3>The SwapBox Dex</h3>
                 </div>
                 <div id="menu-title-container">
                     <button id="login-btn" onClick={login} ref={connectWalletBtnRef}>Connect Wallet</button>
@@ -421,7 +422,7 @@ const SwapBox = ({ Moralis }) => {
                 </div>
             </div>
 
-            {/* <div id="backgroundImg-container">
+            <div id="backgroundImg-container">
                 <img src={(unicorn)} id="unicorn" alt="" />
                 <img src={(whitecloud)} id="whitecloud" alt="" />
                 <img src={(whitecloud)} id="whitecloud2" alt="" />
@@ -430,7 +431,7 @@ const SwapBox = ({ Moralis }) => {
                 <img src={(purplecloud)} id="purplecloud" alt="" />
                 <img src={(rocket)} id="rocket" alt="" />
                 <img src={(stars)} id="stars" alt="" />
-            </div> */}
+            </div>
 
 
 
