@@ -48,8 +48,8 @@ const SwapBox = ({ Moralis }) => {
     const init = async () => {
 
         await Moralis.initPlugins();
-        // await Moralis.User.enableUnsafeCurrentUser()
-        // await Moralis.User.logOut();
+        // await Moralis.enable();
+ 
         if (Moralis.User.current()) {
             const connectWalletBtnRefNode = connectWalletBtnRef.current;
             const logoutWalletBtnRefNode = logoutWalletBtnRef.current;
@@ -57,7 +57,6 @@ const SwapBox = ({ Moralis }) => {
             logoutWalletBtnRefNode.style.display = 'block';
             setDisabled(false)
         }
-        // await Moralis.enableWeb3();
         await getListOfAllTokens();
     }
 
