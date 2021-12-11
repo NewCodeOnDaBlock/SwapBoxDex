@@ -113,15 +113,15 @@ const SwapBox = ({ Moralis }) => {
         const tokenModalRefNode = tokenModalRef.current;
 
         setCurrentSelectSide(side);
-        modalBackgroundRefNode.style.display = 'block';
-        tokenModalRefNode.style.display = 'block'
+        modalBackgroundRefNode.classList.add('active')
+        tokenModalRefNode.classList.add('active')
     }
     function closeModal() {
         const modalBackgroundRefNode = modalBackgroundRef.current;
         const tokenModalRefNode = tokenModalRef.current;
 
-        modalBackgroundRefNode.style.display = 'none';
-        tokenModalRefNode.style.display = 'none'
+        modalBackgroundRefNode.classList.remove('active')
+        tokenModalRefNode.classList.remove('active')
     }
 
     /* =====================================================================*/
@@ -374,15 +374,16 @@ const SwapBox = ({ Moralis }) => {
                 </div>
             </div>
 
+
             <div className="modal-background" ref={modalBackgroundRef} onClick={closeModal}></div>
-            <div id="modal-container" ref={tokenModalRef}>
+            <div className="modal-container"  ref={tokenModalRef}>
                 <div id="modal-header-container">
                     <div id="modal-header-left">
                         <p>Select a token</p>
                     </div>
                     <input onChange={searchTokenInput} placeholder="Search by name only..." value={searchtokennameinput} />
                     <div id="modal-header-right">
-                        <div id="close-modal" onClick={closeModal}>X</div>
+                        <div id="close-modal" onClick={closeModal} style={{fontSize: '22px'}}>&times;</div>
                     </div>
                 </div>
                 <div id="token-list">

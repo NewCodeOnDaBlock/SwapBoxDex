@@ -382,6 +382,7 @@
 
     cursor: pointer;
     background-color: #34369c50;
+    transition:  300ms ease-in-out;
 }
 
 #to_token_select{
@@ -402,6 +403,7 @@
 
     cursor: pointer;
     background-color: #34369c50;
+    transition:  300ms ease-in-out;
 }
 
 /*=============================================*/
@@ -476,34 +478,39 @@
 
 .modal-background{
 
-    display: none; /* Hidden by default */
+    opacity: 0;
     position: fixed; /* Stay in place */
     z-index: 0; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
+    right: 0;
+    bottom: 0;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    animation-duration: 1.5s;
-    transition: 1.5s;
+    transition:  200ms ease-in-out;
+    pointer-events: none;
 }
+.modal-background.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-container{
 
-#modal-container{
-
-    display: none;
     position: fixed;
-    width: 450px;
+    max-width: 90%;
     height: 520px;
-    top: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
     border:  0.5px solid rgba(175, 175, 175, 0.115);
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.32);
     background-color: #35315c;
-    animation-duration: 1.5s;
-    transition: 1.5s;
+    z-index: 10;
+    transition:  200ms ease-in-out;
+}
+.modal-container.active{
 
+    transform: translate(-50%, -50%) scale(1);
 
 }
 
@@ -565,7 +572,7 @@
 
 #token-list{
 
-    width: 450px;
+    width: 100%;
     height: 450px;
     position: relative;
     overflow: scroll;
@@ -594,7 +601,7 @@
     height: 30px;
 }
 #token-option-container-left{
-    width: 25%;
+    width: 50%;
     height: 60px;
     display: flex;
     justify-content: center;
