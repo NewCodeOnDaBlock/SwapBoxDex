@@ -1,6 +1,6 @@
 # SwapBoxDex
 
-I present to you the SwapBoxDex.. A Web3 speedy Dapp (Decentralized Application) running on the ERC2 (Ethereum) eco-system.
+I present to you the SwapBoxDex.. A Web3 speedy Dapp (Decentralized Application) running on the ERC20 (Ethereum) network.
 
 By utilizing and configuring the 1inch plugin API provided by the development platform, Moralis... this application offers a simple cryptocurrency real-time exchange/ swap ability for the user. 
 
