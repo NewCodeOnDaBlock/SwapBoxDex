@@ -486,7 +486,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    transition:  200ms ease-in-out;
+    transition:  300ms ease-in-out;
     pointer-events: none;
 }
 .modal-background.active{
@@ -506,7 +506,7 @@
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.32);
     background-color: #35315c;
     z-index: 10;
-    transition:  200ms ease-in-out;
+    transition:  300ms ease-in-out;
 }
 .modal-container.active{
 

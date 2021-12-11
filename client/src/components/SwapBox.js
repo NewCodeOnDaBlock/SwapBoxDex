@@ -211,7 +211,7 @@ const SwapBox = ({ Moralis }) => {
             toTokenAddress: currenttrade.to.address, // The token you want to receive
             amount: Number(amount)
         });
-        // console.log(quote)
+        console.log(quote)
         gasFeeRefNode.innerText = `${quote?.estimatedGas} Gwei`;
         toAmountRefNode.value = quote?.toTokenAmount / 10 ** quote['toToken']?.decimals;
     }
@@ -244,6 +244,7 @@ const SwapBox = ({ Moralis }) => {
         try {
             swapBtnRef.current.innerHTML = 'Swapping...'
             let receipt = await executeSwap(address, amount);
+            console.log(receipt);
             alert("Swap Complete");
             swapBtnRef.current.innerHTML = 'Swap'
             
@@ -251,6 +252,7 @@ const SwapBox = ({ Moralis }) => {
             swapBtnRef.current.innerHTML = 'Swap'
             fromAmountRef.current.innerText ='Insufficient liquidity...'
             console.log(error);
+            alert("Swap incomplete");
         }
     }
 
