@@ -287,6 +287,7 @@ const SwapBox = ({ Moralis }) => {
                 <div id="logo-title-container">
                     <img src={(logo)} alt="logo" className="logo" />
                     <h3>The SwapBox Dex</h3>
+                    <p className="slogan"><em>"Swapping Made Easy"</em></p>
                 </div>
                 <div id="menu-title-container">
                     <button id="login-btn" onClick={login} ref={connectWalletBtnRef}>Connect Wallet</button>

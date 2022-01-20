@@ -231,19 +231,26 @@
 
 #logo-title-container{
 
-    width: 250px;
+    width: 450px;
     height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid black; */
 
 }
 
 #logo-title-container h3 {
 
     color: rgb(100, 100, 100);
+    /* border: 1px solid black; */
+}
+
+.slogan{
+
+    color: rgb(100, 100, 100);
+    margin-left: 10px;
+    font-size: 10px;
 }
 
 .logo{
